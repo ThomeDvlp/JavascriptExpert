@@ -16,8 +16,8 @@ class File {
   }
 
   static async getFileContent(filePath) {
-    const fileName = join(__dirname, filePath)
-    return (await readFile( fileName )).toString('utf-8')
+    // const fileName = join(__dirname, filePath)
+    return (await readFile( filePath )).toString('utf-8')
   }
 
   static isValid(csvString, options = DEFAULT_OPTION){
@@ -41,7 +41,7 @@ class File {
       }
     }
     
-    // return  { valid: true }
+    return  { valid: true }
 
   }
 }
